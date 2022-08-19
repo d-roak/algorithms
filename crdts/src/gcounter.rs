@@ -8,11 +8,8 @@ pub struct GCounter {
 }
 
 impl GCounter {
-    pub fn new(id: uin64, p: Vec<u64>) -> GCounter {
-        GCounter {
-            id: id,
-            p: p,
-        }
+    pub fn new(id: u64, p: Vec<u64>) -> GCounter {
+        GCounter { id, p }
     }
 
     pub fn increment(&mut self) {
@@ -21,7 +18,7 @@ impl GCounter {
     }
 
     pub fn value(&self) -> u64 {
-        self.p.iter().sum();
+        self.p.iter().sum()
     }
 
     pub fn compare(&self, other: &GCounter) -> bool {
@@ -29,8 +26,6 @@ impl GCounter {
     }
 
     pub fn merge(&mut self, other: &GCounter) -> Vec<u64> {
-        other.p.iter().zip(self.p.iter_mut()).map(|(a, b)| {
-            *b = a.max(*b);
-        }).collect()
+        other.p.iter().zip(self.p.iter()).map(|(a, b)| *a.max(&*b)).collect()
     }
 }
