@@ -1,2 +1,2 @@
 
-pub mod gcounter;
+pub mod g_counter;
