@@ -26,8 +26,8 @@ impl BloomFilter {
 
         BloomFilter {
             n: 0,
-            m: m,
-            k: k,
+            m,
+            k,
             bits: init_vec,
         }
     }
