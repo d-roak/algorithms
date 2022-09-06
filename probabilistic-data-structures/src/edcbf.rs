@@ -62,7 +62,7 @@ impl ExponentallyDecayingCountingBloomFilter {
         true
     }
 
-    pub fn decay(self, data: &Vec<u8>) {
+    pub fn decay(&mut self, data: &Vec<u8>) {
         for i in 0..self.k {
             self.bits[hash_fn(i, self.m, data)] /= self.d;
         }
