@@ -24,7 +24,7 @@ impl CountingBloomFilter {
     pub fn new(m: i32, k: i32) -> CountingBloomFilter {
         let init_vec = vec![0; m as usize];        
 
-        BloomFilter {
+        CountingBloomFilter {
             n: 0,
             m: m,
             k: k,
