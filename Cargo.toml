@@ -1,17 +1,19 @@
 [package]
-name = "algorithms"
-version = "0.1.0"
+name = "ziku-algorithms"
+description = "Implementation for some common algorithms"
+version = "0.1.1"
 edition = "2021"
 authors = ["Joao Carvalho <me@jpldcarvalho.com>"]
 license = "MIT"
 
 [features]
 default = [
-	"crdts"
+	"ziku-crdts",
+	"ziku-pds"
 ]
-crdts = ["dep:crdts"]
-pds = ["dep:pds"]
+ziku-crdts = ["dep:ziku-crdts"]
+ziku-pds = ["dep:ziku-pds"]
 
 [dependencies]
-crdts = { version = "0.1.0", path = "crdts", optional = true }
-pds = { version = "0.1.0", path = "pds", optional = true }
+ziku-crdts = { version = "0.1.0", path = "crdts", optional = true }
+ziku-pds = { version = "0.1.0", path = "pds", optional = true }
