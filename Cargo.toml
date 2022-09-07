@@ -1,0 +1,17 @@
+[package]
+name = "algorithms"
+version = "0.1.0"
+edition = "2021"
+authors = ["Joao Carvalho <me@jpldcarvalho.com>"]
+license = "MIT"
+
+[features]
+default = [
+	"crdts"
+]
+crdts = ["dep:crdts"]
+pds = ["dep:pds"]
+
+[dependencies]
+crdts = { version = "0.1.0", path = "crdts", optional = true }
+pds = { version = "0.1.0", path = "pds", optional = true }
