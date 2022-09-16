@@ -1,7 +1,7 @@
 [package]
 name = "ziku-algorithms"
 description = "Implementation for some common algorithms"
-version = "0.1.1"
+version = "0.1.3"
 edition = "2021"
 authors = ["Joao Carvalho <me@jpldcarvalho.com>"]
 license = "MIT"
